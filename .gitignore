@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# VSCode or PyCharm
+.vscode/
+.idea/
+
+# Data cache
+parser_output.json
+cleaned_emails.json
+output/*.md
+output/*.pdf
+
+# System files
+.DS_Store
+Thumbs.db

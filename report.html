@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CYFO INC Spear Phishing Attack Report</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 40px; line-height: 1.8; color: #333; }
+    h1, h2, h3 { color: #2c3e50; }
+    img { max-width: 100%; margin: 20px 0; border: 1px solid #ccc; }
+    ul { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>CYFO INC Spear Phishing Analysis Report</h1>
+  <h2>1. Background</h2>
+  <p>This project conducts a full forensic analysis of emails targeting the fictional company CYFO INC, identifying spear phishing activity and attacker attribution.</p>
+
+  <h2>2. Data Processing Workflow</h2>
+  <ul>
+    <li><strong>Extraction:</strong> Parsed .eml files using parser.py to extract structured fields including sender, receivers, IPs, content, etc.</li>
+    <li><strong>Cleaning:</strong> Normalized email formats, parsed timestamps, cleaned MIME types.</li>
+    <li><strong>Modeling & Analysis:</strong> Performed statistical modeling with pandas and sqlite3.</li>
+    <li><strong>Visualization & Reporting:</strong> Generated chart visualizations and exported Markdown or HTML reports.</li>
+  </ul>
+
+  <h2>3. Spear Phishing Target Detection</h2>
+  <p>By matching recipients against the employee list, <strong>69 emails</strong> were identified as targeting CYFO staff.</p>
+  <img src="output/spear_department_bar.png" alt="Department Bar Chart">
+
+  <h2>4. Attacker Attribution</h2>
+  <p>IP addresses extracted from headers were analyzed via WHOIS to determine origin organizations and countries.</p>
+  <img src="output/attacker_orgs.png" alt="Attacker Organizations">
+  <img src="output/attacker_countries.png" alt="Attacker Country Distribution">
+
+  <h2>5. Conclusions and Recommendations</h2>
+  <ul>
+    <li>Enhance security awareness training for high-risk departments like IT and HR</li>
+    <li>Implement SPF, DKIM, and DMARC policies on the email gateway</li>
+    <li>Blacklist attacker IPs at the firewall or SIEM level</li>
+    <li>Automate future forensic workflows for phishing analysis</li>
+  </ul>
+
+  <h2>6. Project Deliverables</h2>
+  <ul>
+    <li>Cleaned email data: <code>cleaned_emails.json</code></li>
+    <li>Employee reference list: <code>employees.csv</code></li>
+    <li>Visual charts: 3 charts including bar and pie plots</li>
+    <li>Final report: <code>spear_report.md</code> or exported PDF</li>
+  </ul>
+</body>
+</html>
