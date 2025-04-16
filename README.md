@@ -65,12 +65,15 @@ python visualize.py
 ## 📊 Output Samples
 
 - Targeted department chart
+
   ![Department Chart](output/spear_department_bar.png)
 
 - Attacker organizations
+
   ![Organizations](output/attacker_orgs.png)
 
 - Attacker country distribution
+
   ![Countries](output/attacker_countries.png)
 
 ---
